@@ -229,3 +229,4 @@ MatrixMind demonstrates the integration of numerical linear algebra, semantic re
 - The no-key tutor mode is an extractive retrieval preview, not a generative AI model. Configure Groq to get generated explanations.
 - The matrix workbench limits each matrix dimension to 12 for browser-demo safety and responsiveness.
 - The included starter notes provide foundational learning content. Upload your own syllabus, textbook extracts, and lecture notes to extend the course knowledge base.
+
