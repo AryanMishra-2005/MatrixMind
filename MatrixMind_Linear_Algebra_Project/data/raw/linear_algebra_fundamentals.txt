@@ -1,0 +1,48 @@
+MATRIXMIND COURSE NOTES — LINEAR ALGEBRA FUNDAMENTALS
+
+1. INTRODUCTION TO LINEAR ALGEBRA
+Linear algebra studies vectors, matrices, systems of linear equations, vector spaces, and linear transformations. It is used in computer graphics, data science, machine learning, engineering, economics, and scientific computing. A scalar is a single number. A vector is an ordered list of numbers. A matrix is a rectangular arrangement of numbers in rows and columns. The order of a matrix is written as rows × columns.
+
+2. SCALARS, VECTORS, AND BASIC VECTOR OPERATIONS
+A vector in R^n has n real components. Two vectors can be added only when they have the same dimension. Vector addition is component-wise. Scalar multiplication multiplies every component by the same scalar. The zero vector contains only zeros. A linear combination of vectors v1,...,vk is c1v1 + ... + ckvk, where the coefficients c1,...,ck are scalars. The dot product of u and v is u·v = u1v1 + ... + unvn. The Euclidean norm is ||v|| = sqrt(v·v). Two non-zero vectors are orthogonal when their dot product is zero.
+
+3. MATRICES AND MATRIX OPERATIONS
+A matrix A with m rows and n columns is an m × n matrix. Matrix addition and subtraction are defined only for matrices of the same order and are performed entry by entry. Scalar multiplication multiplies every matrix entry by the scalar. Matrix multiplication AB is defined when the number of columns of A equals the number of rows of B. If A is m × n and B is n × p, then AB is m × p. The entry (i,j) of AB is the dot product of row i of A with column j of B. Matrix multiplication is generally not commutative: AB is not usually equal to BA. It is associative and distributive.
+
+The transpose A^T is obtained by interchanging rows and columns. The identity matrix I has ones on the main diagonal and zeros elsewhere; AI = IA = A when dimensions are compatible. The zero matrix contains only zero entries. A square matrix has the same number of rows and columns. A symmetric matrix satisfies A^T = A. A diagonal matrix has zero entries outside its main diagonal.
+
+4. DETERMINANTS AND INVERSE MATRICES
+The determinant is a scalar associated with a square matrix. For a 2 × 2 matrix A = [[a,b],[c,d]], det(A) = ad − bc. A square matrix is singular if its determinant is zero and non-singular (invertible) if its determinant is non-zero. For a 2 × 2 matrix with non-zero determinant, A^-1 = (1/(ad−bc)) [[d,−b],[−c,a]]. In general, the inverse satisfies AA^-1 = A^-1A = I. A non-singular square matrix has a unique inverse. Determinants can be used to test invertibility and to understand how a linear transformation scales area or volume.
+
+5. SYSTEMS OF LINEAR EQUATIONS
+A system of linear equations can be written as Ax = b, where A is the coefficient matrix, x is the unknown vector, and b is the right-hand-side vector. A system may have one solution, infinitely many solutions, or no solution. Elementary row operations are: interchange two rows; multiply a row by a non-zero scalar; and add a multiple of one row to another row. These operations produce an equivalent system and do not change its solution set.
+
+6. GAUSSIAN ELIMINATION AND GAUSS-JORDAN ELIMINATION
+Gaussian elimination uses elementary row operations to convert an augmented matrix [A|b] to row echelon form. In row echelon form, all zero rows are at the bottom, each leading entry is to the right of the leading entry in the row above, and entries below each pivot are zero. Back substitution then finds the unknowns. Gauss-Jordan elimination continues until reduced row echelon form is reached. In reduced row echelon form, every pivot is 1 and is the only non-zero entry in its column. The pivot columns identify basic variables. Non-pivot columns correspond to free variables. A pivot in every variable column gives a unique solution when the system is consistent; a contradictory row such as [0 0 ... 0 | c] with c non-zero means no solution.
+
+7. RANK OF A MATRIX
+The rank of a matrix is the maximum number of linearly independent rows or columns. It is also the number of pivots in row echelon form and the number of non-zero rows in reduced row echelon form. Row rank equals column rank. The rank-nullity theorem for a matrix A with n columns states rank(A) + nullity(A) = n. For Ax=b, the system is consistent exactly when rank(A) = rank([A|b]). If the common rank equals the number of unknowns, the solution is unique; if it is smaller, a consistent system has free variables and infinitely many solutions.
+
+8. VECTOR SPACES, SUBSPACES, SPAN, AND BASIS
+A vector space is a set of vectors with vector addition and scalar multiplication satisfying the vector-space axioms. Examples include R^n, polynomials of bounded degree, and suitable matrix spaces. A non-empty subset W of a vector space V is a subspace if it is closed under addition and scalar multiplication. The span of a set of vectors is the set of all their linear combinations. A set is linearly independent if the only linear combination equal to the zero vector has all coefficients zero. Otherwise, it is linearly dependent. A basis is a linearly independent spanning set. The dimension of a finite-dimensional vector space is the number of vectors in any basis. Every basis of a finite-dimensional vector space has the same number of vectors.
+
+9. LINEAR TRANSFORMATIONS
+A function T: V → W is linear if T(u+v)=T(u)+T(v) and T(cv)=cT(v). A linear transformation between finite-dimensional coordinate spaces can be represented by a matrix. The kernel (null space) of T is the set of vectors mapped to zero. The image or range is the set of all output vectors. For a matrix A, the null space is N(A)={x:Ax=0} and the column space is the span of the columns of A. The rank-nullity theorem states dim(N(A)) + rank(A) = number of columns of A.
+
+10. EIGENVALUES AND EIGENVECTORS
+For a square matrix A, a non-zero vector v is an eigenvector if Av = λv for some scalar λ. The scalar λ is the corresponding eigenvalue. Eigenvalues are found from the characteristic equation det(A−λI)=0. The characteristic polynomial is det(A−λI). An eigenvector must be non-zero. Eigenvectors corresponding to distinct eigenvalues are linearly independent. Eigenvalues and eigenvectors describe directions that a linear transformation scales without changing their direction.
+
+11. DIAGONALIZATION
+A square matrix A is diagonalizable if A=PDP^-1, where D is a diagonal matrix containing eigenvalues and columns of P are linearly independent eigenvectors. An n × n matrix with n linearly independent eigenvectors is diagonalizable. Diagonalization can simplify powers of matrices and repeated applications of a transformation. A matrix with n distinct eigenvalues is diagonalizable, but repeated eigenvalues require checking whether there are enough independent eigenvectors.
+
+12. INNER PRODUCTS, ORTHOGONALITY, AND ORTHONORMAL BASES
+The standard inner product in R^n is the dot product. The norm is induced by the inner product. Vectors are orthogonal if their inner product is zero. A set is orthonormal if its vectors are pairwise orthogonal and each has norm one. An orthogonal matrix Q satisfies Q^TQ=I; its columns form an orthonormal basis, and Q^-1=Q^T. Orthogonal transformations preserve lengths and angles.
+
+13. PROJECTIONS AND GRAM-SCHMIDT PROCESS
+The projection of vector v onto a non-zero vector u is proj_u(v)=((v·u)/(u·u))u. Projection is useful for decomposing a vector into parallel and perpendicular parts. The Gram-Schmidt process converts a linearly independent list of vectors into an orthogonal list spanning the same subspace; normalizing the resulting vectors produces an orthonormal basis. It is used in QR factorization and least-squares methods.
+
+14. LEAST-SQUARES APPROXIMATION
+When Ax=b has no exact solution, a least-squares solution minimizes ||Ax−b||. A least-squares solution satisfies the normal equations A^TAx=A^Tb. If the columns of A are linearly independent, A^TA is invertible and the solution is x=(A^TA)^-1A^Tb. Least squares is used in data fitting, regression, and overdetermined systems.
+
+15. IMPORTANT FORMULAS AND EXAM CHECKLIST
+For a 2 × 2 matrix [[a,b],[c,d]], determinant = ad−bc. Matrix multiplication AB is defined only when columns(A)=rows(B). A square matrix is invertible exactly when its determinant is non-zero, its rank is full, and its columns are linearly independent. The solution set of Ax=0 is the null space. The number of free variables equals the number of columns minus the rank. Eigenvalues satisfy det(A−λI)=0. An orthogonal matrix satisfies Q^TQ=I. The rank-nullity theorem is rank(A)+nullity(A)=n for n columns.

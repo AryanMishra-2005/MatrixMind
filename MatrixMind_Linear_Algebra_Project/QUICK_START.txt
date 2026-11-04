@@ -1,0 +1,22 @@
+MATRIXMIND — LINEAR ALGEBRA AI WORKSPACE
+
+1. Extract this folder.
+2. Open PowerShell in this folder.
+3. Run:
+
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+   .\run.ps1
+
+4. Open http://127.0.0.1:8000
+
+Optional AI generation:
+- Open the generated .env file.
+- Set GROQ_API_KEY=gsk_your_key_here
+- Save and restart the app.
+
+Without a Groq key, matrix operations, the Knowledge Graph, document upload,
+and local retrieval still work. The tutor shows relevant note passages rather
+than generated LLM answers.
+
+API docs: http://127.0.0.1:8000/api/v1/docs
+Stop the server with Ctrl+C.
