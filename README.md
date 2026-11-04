@@ -2,10 +2,6 @@
 
 **MatrixMind** is a browser-based linear algebra learning environment combining a numerical matrix workbench, Retrieval-Augmented Generation (RAG), and a subject-specific Knowledge Graph.
 
-## What changed in this project
-
-The uploaded project was originally a quantum-computing RAG assistant. It has been converted into a linear algebra learning project and rebranded as MatrixMind. The existing FastAPI, document-ingestion, retrieval, chat-history, and graph architecture has been retained and adapted instead of being replaced with a separate application.
-
 ## Main features
 
 ### 1. Linear Algebra Matrix Lab
