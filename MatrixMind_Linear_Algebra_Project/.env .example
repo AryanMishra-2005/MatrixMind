@@ -1,0 +1,22 @@
+# Optional: add a Groq API key for generated AI answers.
+# Get one from https://console.groq.com
+GROQ_API_KEY=PLACE_YOUR_API_KEY_HERE
+LLM_MODEL=openai/gpt-oss-120b
+MAX_TOKENS=4096
+TEMPERATURE=0.2
+
+# Local vector retrieval — no model download is needed.
+EMBEDDING_MODEL=local-feature-hashing-v1
+TOP_K_RESULTS=6
+SIMILARITY_THRESHOLD=0.12
+CHUNK_SIZE=720
+CHUNK_OVERLAP=80
+
+DATA_RAW_DIR=data/raw
+DATA_PROCESSED_DIR=data/processed
+KNOWLEDGE_GRAPH_PATH=data/knowledge_graph/knowledge_graph.json
+API_HOST=127.0.0.1
+API_PORT=8000
+API_RELOAD=true
+LOG_LEVEL=INFO
+CORS_ORIGINS=http://localhost:8000,http://127.0.0.1:8000
