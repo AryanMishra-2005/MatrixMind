@@ -165,7 +165,7 @@ The following images are static previews of the application interface. The live 
 
 | AI Tutor | Matrix Lab |
 |---|---|
-| ![MatrixMind AI Tutor interface](preview/UI_1.png) | ![MatrixMind Matrix Lab interface](preview/UI_2.png) |
+| ![MatrixMind AI Tutor interface](Preview/UI_1.png) | ![MatrixMind Matrix Lab interface](Preview/UI_2.png) |
 
 ---
 
